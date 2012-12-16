@@ -3,7 +3,7 @@
 
   <groupId>labbar</groupId>
   <artifactId>labb-2</artifactId>
-  <version>1.3-SNAPSHOT</version>
+  <version>1.3</version>
   <packaging>jar</packaging>
   <name>labb-2</name>
   <url>http://maven.apache.org</url>
