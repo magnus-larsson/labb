@@ -5,15 +5,26 @@
   <artifactId>labb</artifactId>
   <version>1.1-SNAPSHOT</version>
   <packaging>jar</packaging>
-
-  <name>labb-1</name>
+  <name>labb</name>
   <url>http://maven.apache.org</url>
 
- <scm>
+  <scm>
 	<connection>scm:git:git@github.com:magnus-larsson/labb.git</connection>
 	<url>scm:git:git@github.com:magnus-larsson/labb.git</url>
 	<developerConnection>scm:git:git@github.com:magnus-larsson/labb.git</developerConnection>
   </scm>
+
+	<distributionManagement>
+		<repository>
+			<id>brandon-private-repository</id>
+			<url>dav:https://repository-soi-toolkit.forge.cloudbees.com/release/</url>
+		</repository>
+		<snapshotRepository>
+			<uniqueVersion>false</uniqueVersion>
+			<id>brandon-private-repository</id>
+			<url>dav:https://repository-soi-toolkit.forge.cloudbees.com/snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -36,6 +47,14 @@
         <version>2.2.1</version>
       </plugin>
     </plugins>
+
+    <extensions>
+         <extension>
+            <groupId>org.apache.maven.wagon</groupId>
+            <artifactId>wagon-webdav-jackrabbit</artifactId>
+            <version>1.0-beta-7</version>
+         </extension>
+    </extensions>
   </build>
 
 </project>
